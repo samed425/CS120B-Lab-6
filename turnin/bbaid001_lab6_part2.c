@@ -131,12 +131,14 @@ void Tick() {
 		case (INIT) :
 			break;
 		case (s0) :
+			cycle = 0;
 			B = 0x01;
 			break;
 		case (s1) :
 			B = 0x02;
 			break;
 		case (s2) :
+			cycle = 1;
 			B = 0x04;
 			break;
 		case (wait1) :
