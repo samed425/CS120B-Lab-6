@@ -174,7 +174,7 @@ int main(void) {
 	TimerOn();
 	state = INIT;
 	while (1) {
-		button = PINA & 0x03;
+		button = ~PINA & 0x03;
 		Tick();
 		while (!TimerFlag);
 		TimerFlag = 0;
