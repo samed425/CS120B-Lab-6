@@ -60,6 +60,7 @@ void Tick() {
 		case (INIT) :
 			state = wait;
 			break;
+
 		case (wait) :
 			if (button == 0x01) {
 				state = inc;
@@ -70,7 +71,7 @@ void Tick() {
 			else if (button == 0x03) {
 				state = reset;
 			}
-			else {
+			else if (button == 0x00) {
 				state = wait;
 			}
 			break;
@@ -86,7 +87,7 @@ void Tick() {
 			else if (button == 0x03) {
 				state = reset;
 			}
-			else {
+			else if (button == 0x00){
 				state = wait;
 			}
 			break;
@@ -101,7 +102,7 @@ void Tick() {
 			else if (button == 0x03) {
 				state = reset;
 			}
-			else {
+			else if (button == 0x00) {
 				state = wait;
 			}
 			break;
