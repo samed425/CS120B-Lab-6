@@ -51,7 +51,7 @@ void TimerSet(unsigned long M){
 
 enum states {INIT, s0, s1, s2} state;
 
-void tick() {
+void Tick() {
 	switch (state) {
 		case (INIT) :
 			state = s0;
@@ -91,9 +91,9 @@ int main(void) {
 	DDRB = 0xFF; PORTB = 0x00;
 	TimerSet(1000);
 	TimerOn();
-	State = INIT;
+	state = INIT;
 	while (1) {
-		Tick*(;
+		Tick();
 		while (!TimerFlag);
 		TimerFlag = 0;
     	}
