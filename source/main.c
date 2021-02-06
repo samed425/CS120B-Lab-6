@@ -89,7 +89,7 @@ void Tick() {
 int main(void) {
 	DDRA = 0x00; PORTA = 0xFF;
 	DDRB = 0xFF; PORTB = 0x00;
-	TimerSet(1000);
+	TimerSet(125);
 	TimerOn();
 	state = INIT;
 	while (1) {
