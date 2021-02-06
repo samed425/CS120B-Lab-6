@@ -167,14 +167,14 @@ void Tick() {
 int main(void) {
 	DDRA = 0x00; PORTA = 0xFF;
 	DDRB = 0xFF; PORTB = 0x00;
-	B = 0x00;
+	B = 0x07;
 	timer = 0;
 	button = 0x00;
 	TimerSet(100);
 	TimerOn();
 	state = INIT;
 	while (1) {
-		button = ~PINA & 0x01;
+		button = ~PINA & 0x03;
 		Tick();
 		while (!TimerFlag);
 		TimerFlag = 0;
